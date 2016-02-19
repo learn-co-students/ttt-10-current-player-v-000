@@ -20,6 +20,7 @@ def current_player( board )
     current_player = "O"
   end
 =end
+# using ternary operator
   num_moves % 2 == 0 ? current_player = "X" : current_player = "O"
 
   current_player
