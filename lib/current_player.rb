@@ -1,18 +1,16 @@
 def turn_count(board)
+  # board.count{|token| token == "X" || token == "O"}
 
-  counter = 0
-if my_condition_is_met
-  counter += 1
-end
-
-
-board = ["X", "O", " "]
-board.each do |times|
-  puts "#{times} turn(s) has been played!"
-end
+  turns = 0
+  board.each do |token|
+    if token == "X" || token == "O"
+      turns += 1
+    end
   end
+  turns
 
-
+end
 
 def current_player(board)
-  end
+  turn_count(board) % 2 == 0 ? "X" : "O"
+end
