@@ -11,11 +11,22 @@ def turn_count(board)
 end
 
 def current_player(board)
-  if (turn_count(board) % 2) == 0
-    "X"
-  else
-    "O"
-  end
+  board = (turn_count(board) % 2) == 0 ? "X" : "O"
 end
 
+#def current_player(board)
+#  if (turn_count(board) % 2) == 0
+#    "X"
+#  else
+#    "O"
+#  end
+#end
 
+#input_type = gets =~ /hello/i ? "X" : "O"
+
+#input_type =
+#  if gets =~ /hello/i
+#    "greeting"
+#  else
+#    "other"
+#  end
