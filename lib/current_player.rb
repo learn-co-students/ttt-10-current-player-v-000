@@ -3,7 +3,7 @@ def turn_count(board)
   board.each do |pos|
     pos == "X" || pos == "O" ? count+=1 : count+=0
   end
-  return count
+  count
 end
 
 def current_player(board)
