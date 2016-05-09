@@ -1,6 +1,3 @@
-#board = ["O", "O", " ", " ", "X", " ", " ", " ", "X"]
-
-
 def turn_count(array)
 	turn_count = 0
 	array.each do |position|
@@ -11,18 +8,15 @@ def turn_count(array)
 	return turn_count
 end
 
-
 def current_player(array)
-	#puts "turns played is #{turn_count(array)}"
+	puts "turns played is #{turn_count(array)}"
 	player = turn_count(array) % 2
-	#puts "Player is #{player} #{player.class}"
+	puts "Player is #{player} #{player.class}"
 	if player == 0
-		#puts "it is X's turn"
+		puts "it is X's turn"
 		return "X"
 	else
-		#puts "it is O's turn"
+		puts "it is O's turn"
 		return "O"
 	end
 end
-
-#current_player(board)
