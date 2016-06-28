@@ -3,15 +3,16 @@ def turn_count(board)
   counter = 0
   board.each do |token|
     #check and see if token is equal to X or O
-    if token = "X" || "O"
+    if token == "X" || "O"
       #   increment counter
       counter += 1
+    #elsif token = "O"
+      #counter += 1
     else
-      turn_count
-      end
-  counter
+      counter = 0
+      turn_count(board)
+    end
 end
-
 #iterate through each board space
 #if token is equal to X or O, increment counter
 #after iterationm return counter
@@ -30,5 +31,3 @@ end
 #def current_player["X", "O"]
 #current_player.each do |player|
       #end
-
-#current_player(board)
