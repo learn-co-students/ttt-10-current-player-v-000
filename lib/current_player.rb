@@ -1,7 +1,7 @@
 def turn_count(board)
   counter = 0
   board.each{|token|}
-  token == "X" || "O"
+  def token = "X" || "O"
   if turn_count == 4 % 2
     current_player = "X"
   else
