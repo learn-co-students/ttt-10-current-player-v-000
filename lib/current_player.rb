@@ -1,14 +1,20 @@
 def turn_count(board)
+  #board = ["O", " ", " ", " ", "X", " ", " ", " ", "X"]
   counter = 0
-  board.each{|token|}
-  def token = "X" || "O"
-  if turn_count == 4 % 2
-    current_player = "X"
-  else
-    current_player = "O"
-  counter +=1
+  board.each do |token|
+    #check and see if token is equal to X or O
+    if token = "X" || "O"
+      #   increment counter
+      counter += 1
+    else
+      turn_count
       end
-    end
+  counter
+end
+
+#iterate through each board space
+#if token is equal to X or O, increment counter
+#after iterationm return counter
 
 #def current_player["X","O"]
 #end
