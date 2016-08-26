@@ -31,16 +31,17 @@ end
   #desired outcome is number of turns that have been made by
     #setting some counter, starting @ 0, to iterate over each member of
     #board array, to see if element is "x" or "o" by 1 increments
-def current_player (board)
+def current_player(board) # can't have a space b/f and use parenthesise to hold argument
+#start a REPL session
   #def current_player
   #def current_player (board) # wrong number of arguments (0 for 1)
   #def current_player () # wrong number of arguments (1 for 0)
   #def current_player (board, first = "X", second = "O")
-  if turn_count % 2 == 0
-    return "O"
+  if turn_count(board) % 2 == 0 #failed to include turn_count method's argument (board) 1st x; worked after argument inclusion
+    return "X" #1st x w/ "O"-returned failure/error msg where it expected "X" & got "O"
     #puts "O", returns nil. same as print command
-  elsif turn_count % 2 == 1
-    return "X"
+  elsif turn_count(board) % 2 == 1
+    return "O" #1st x w/"X"-returned failure/error msg where it expected "X" & got "O"
     #puts "X", return nil. same as print command
   end
 end
