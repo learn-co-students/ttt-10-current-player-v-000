@@ -1,7 +1,7 @@
 #turn_count -- use #each method . set counter to star at 0
 board =[" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-
+#This method takes in an argument of the board array and returns the number of turns that have been played.
 def turn_count(board)
   9 - board.count(" ")
 end
