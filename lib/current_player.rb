@@ -8,12 +8,20 @@ def turn_count(board)
   return counter
 end
 
+#def current_player(board)
+#  play = turn_count(board) % 2
+#  if play == 0
+#    return "X"
+#  else
+#    return "O"
+#  end
+#end
+
+#Then, try refactoring your method to use the .even? or .odd? methods. Look them up in the Ruby Docs to learn more.
 def current_player(board)
-  play = turn_count(board) % 2
-  if play == 0
+  if turn_count(board).even?
     return "X"
   else
     return "O"
   end
 end
-#Then, try refactoring your method to use the .even? or .odd? methods. Look them up in the Ruby Docs to learn more.
