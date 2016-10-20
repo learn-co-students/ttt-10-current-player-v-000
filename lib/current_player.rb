@@ -18,10 +18,15 @@ end
 #end
 
 #Then, try refactoring your method to use the .even? or .odd? methods. Look them up in the Ruby Docs to learn more.
+#def current_player(board)
+#  if turn_count(board).even?
+#    return "X"
+#  else
+#    return "O"
+#  end
+#end
+
+#Ternary if
 def current_player(board)
-  if turn_count(board).even?
-    return "X"
-  else
-    return "O"
-  end
+  turn_count(board).even? ? "X" : "O"
 end
