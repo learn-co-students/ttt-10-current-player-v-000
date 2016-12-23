@@ -1,7 +1,7 @@
 def turn_count(board)
   counter = 0
-  board.each do |element|
-    if element == "X" || element == "O"
+  board.each do |index|
+    if index == "X" || index == "O"
       counter += 1
     end
   end
@@ -9,5 +9,10 @@ def turn_count(board)
 end
 
 def current_player(board)
-  turn_count(board) % 2 == 0 ? "X" : "O"
+  if turn_count(board) % 2 == 0
+    "X"
+  elsif turn_count(board) % 2 == 1
+    "O"
+  end
+  
 end
