@@ -11,16 +11,3 @@ def current_player(board)
     return "O"
   end
 end
-
-
-
-
-#RETURN NUMBER OF TURNS PLAYED
-
-#current_player(board)
-  #board.each do |num|
-  #if num % 2 == 0
-  #puts "X"
-#else
-  #puts "O"
-#
