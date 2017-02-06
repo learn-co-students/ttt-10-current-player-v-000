@@ -8,4 +8,4 @@ def current_player(board)
  else turn_count(board).odd?
    "O"
  end
-ends
+end
