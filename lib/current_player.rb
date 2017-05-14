@@ -1,20 +1,18 @@
-# Need two methods 
+# Need two methods
 
 def turn_count(board)
-  #returns the number of turns that have been played
   counter = 0
-  board.each do |position|
-    if position == "X" || position == "O"
-      counter += 1  
-    end
+  board.each do |index|
+    counter += 1 unless index == " "
   end
   counter
 end
 
+
 def current_player(board)
-  if turn_count(board).to_i % 2 == 0
-    return "X"
+  if turn_count(board) % 2 == 0
+    "X"
   else
-    return "O"
+    "O"
   end
 end
