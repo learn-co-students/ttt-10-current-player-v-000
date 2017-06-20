@@ -12,9 +12,5 @@ end
 #input_type = gets =~ /hello/i ? "greeting" : "other"
 #current_player
 def current_player(board)
-  if turn_count(board).even?
-    last_player = "X"
-  else
-    last_player = "O"
-  end
+  turn_count(board).even? ? "X" : "O"
 end
