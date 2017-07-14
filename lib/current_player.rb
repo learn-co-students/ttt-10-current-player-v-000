@@ -1,7 +1,17 @@
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
+#def turn_count(board)
+#  board.count("X") + board.count("O")
+#end
+
 def turn_count(board)
-  board.count("X") + board.count("O")
+  counter = 0
+  board.each do |index|
+    if index == "X" || index == "O"
+      counter += 1
+    end
+  end
+  counter
 end
 
 def current_player(board)
