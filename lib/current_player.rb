@@ -3,17 +3,18 @@ def turn_count(board)
   board.each do |turn|
     if turn == "O" || turn == "X"
       counter += 1
-      puts "#{turn} has played. This is turn number #{counter}."
+      # puts "This is turn number #{counter}."
     end
   end
-  return counter
+  counter
 end
 
 def current_player(board)
-  if turn_count(board).even?
-    # or turn_count(board) % 2 == 0
-    return "X"
-  else
-    return "O"
-  end
+  turn_count(board).even? ? "X" : "O"
+  # or if turn_count(board).even?
+  # or if turn_count(board) % 2 == 0
+    #   "X"
+  # else
+    #   "O"
+  # end
 end
