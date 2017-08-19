@@ -7,6 +7,16 @@ describe "./lib/current_player.rb" do
 
       expect(turn_count(board)).to eq(3)
     end
+    it 'counts occupied positions' do
+      board = [" ", " ", " ", " ", " ", " ", " ", " ", "X"]
+
+      expect(turn_count(board)).to eq(1)
+    end
+    it 'counts occupied positions' do
+      board = ["O", " ", " ", " ", "X", "O", "X", " ", "X"]
+
+      expect(turn_count(board)).to eq(5)
+    end
   end
 
   describe '#current_player' do
@@ -27,5 +37,5 @@ describe "./lib/current_player.rb" do
 
       expect(current_player(board)).to eq("X")
     end
-  end  
+  end
 end
