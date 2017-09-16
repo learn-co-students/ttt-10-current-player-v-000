@@ -19,3 +19,8 @@ def current_player(board)
   end
   current_player
 end
+
+# correct way with Ternary
+# def current_player(board)
+#   turn_count(board) % 2 == 0 ? "X" : "O"
+# end
