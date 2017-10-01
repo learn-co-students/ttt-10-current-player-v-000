@@ -1,5 +1,12 @@
+
+require "pry"
+
 def current_player(board)
-  "X" || "O"
+  if turn_count(board) % 2 == 0
+    "X"
+  else
+    "O"
+  end
 end
 def position_taken?(board, index)
   # what defines a position being taken in tic tac toe
