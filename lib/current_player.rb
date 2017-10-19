@@ -1,5 +1,3 @@
-# board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-
 # `#current_player` method should take in an argument of the game board and use the `#turn_count` method to determine if it is `"X"`'s turn or `"O"`'s.
 # If the turn count is an even number, the `#current_player` method should return `"X"`, otherwise, it should return `"O"`.
 
@@ -30,9 +28,5 @@ end
 
 def current_player(board)
   turn_counter_2 = turn_count(board)
-  if turn_counter_2 % 2 == 0
-    current_player = "X"
-  else
-    current_player = "O"
-  end
+  turn_counter_2 % 2 == 0 ? current_player = "X" : current_player = "O"
 end
