@@ -6,11 +6,13 @@ def turn_count(board)
     else counter = counter
     end
   end
-  current_player(counter)
+  return counter
 end
-def current_player(counter)
-    if counter % 2.even?
+def current_player(board)
+    if (turn_count(board) % 2).even?
       value = "X"
-    else value = "O"
+    else
+      value = "O"
     end
+  return value
 end
