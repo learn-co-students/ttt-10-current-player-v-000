@@ -1,11 +1,10 @@
 def turn_count(board)
-
-counter = 0 #return coutner
-board.each do |position|  #board = [" ", "O", "X", " ", " ", etc.. " "]
+  counter = 0
+  board.each do |position|
   if position == "X" || position == "O"
     counter +=1 #counter = counter + 1
-  end
-end #end of each
+    end
+  end 
 counter
 end
 
