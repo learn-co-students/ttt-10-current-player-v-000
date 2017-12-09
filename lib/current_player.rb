@@ -1,3 +1,4 @@
+# determine how many turns have been made
 def turn_count(board)
 counter = 0
 board.each do |turn|
@@ -9,7 +10,7 @@ board.each do |turn|
 end
 
 
-
+# determine if it's X's or O's turn
 def current_player(board)
   if turn_count(board) % 2 == 0
        "X"
