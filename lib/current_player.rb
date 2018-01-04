@@ -11,22 +11,11 @@ def turn_count(board)
 end
 
 def current_player(board)
-  x_count = 0
-  o_count = 0
-
-  board.each do |e|
-    if e == "X"
-      x_count += 1
-    elsif e == "O"
-      o_count += 1
-    end
+  if turn_count(board).modulo(2) == 0
+    current_player = "X"
+  else
+    current_player = "O"
   end
 
-  if x_count == 0 && o_count == 0
-    return current_player = "X"
-  elsif x_count > o_count
-    return current_player = "O"
-  elsif x_count == o_count
-    return current_player = "X"
-  end
+  return current_player
 end
