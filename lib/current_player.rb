@@ -1,12 +1,16 @@
-turn_count = ["X", "O"]
-counter = 0 
-turn_count.each do
-counter += 1
+def turn_count(board)
+  # board.count{|token| token == "X" || token == "O"}
 
+  turns = 0
+  board.each do |token|
+    if token == "X" || token == "O"
+      turns += 1
+    end
+  end
+  turns
 
-current_player = turn_count
-if turn_count % 2 
-  puts "X"
-else 
-  puts "O"
+end
+
+def current_player(board)
+  turn_count(board) % 2 == 0 ? "X" : "O"
 end
