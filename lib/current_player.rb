@@ -8,6 +8,7 @@ def turn_count(board)
   return turns
 end
 
+# Using %
 def current_player(board)
   if turn_count(board) % 2 == 0
     return "X"
@@ -15,3 +16,12 @@ def current_player(board)
     return "O"
   end
 end
+
+# Using .even? and .odd?
+# def current_player(board)
+#   if turn_count(board).even?
+#     return "X"
+#   elsif turn_count(board).odd?
+#     return "O"
+#   end
+# end
