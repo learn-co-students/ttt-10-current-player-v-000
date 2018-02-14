@@ -1,16 +1,16 @@
 
 
 def turn_count(board)
-    board .do |space|
-    space != " "
+    board.count do |space|
+    # space != " "
+    space == "X" || space == "O"
   end
 end
 
 def current_player(board)
-  turn_count(board)
-  if turns % 2 == 0
-    current_player = "X"
+  if turn_count(board) % 2 == 0
+    "X"
   else
-    current_player = "O"
+    "O"
   end
 end
