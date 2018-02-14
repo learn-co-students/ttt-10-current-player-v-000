@@ -1,13 +1,9 @@
 
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-def turn_count(board)
-  turns = 0
-  board each.do |space|
-  if space == "X" || space == "O"
-    turns += 1
 
+def turn_count(board)
+    board .do |space|
+    space != " "
   end
-  return turns
 end
 
 def current_player(board)
