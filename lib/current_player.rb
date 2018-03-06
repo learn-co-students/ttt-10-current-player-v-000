@@ -14,6 +14,10 @@ def current_player(board)
   #  current_player = "X"
   #else
   #  current_player = "O"
+  #end
+  #end
+  #return current_player
+  #end
 
   ##refactoring using .odd? and .even?
   if turn_count(board).odd?
@@ -23,5 +27,3 @@ else turn_count(board).even?
 
 end
 end
-#return current_player
-#end
