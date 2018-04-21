@@ -1,8 +1,19 @@
 def turn_count(board)
-  turns_played = 0
+  turn = 0
   board.each do |space|
-  puts "#{space.length} position occupied"
-  if "#{space.length}".to_i >= 1
-    turns_played += 1
+  if "#{space}" == "X" || "#{space}" == "O"
+    turn += 1
+  end
+  end
+  return turn
+end
+
+def current_player(board)
+  if turn_count(board) == 0
+    return "X"
+  elsif turn_count(board) % 2 == 0
+    return "X"
+  else
+    return "O"
   end
 end
