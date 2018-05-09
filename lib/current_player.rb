@@ -11,3 +11,4 @@ end
 def current_player(board)
   current_player = (turn_count(board) % 2 == 0) ? 'X' : 'O'
 end
+  
