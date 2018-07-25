@@ -1,0 +1,19 @@
+def turn_count(board)
+
+  counter = 0
+  board.each do |player|
+    if player == "X" or player == "O"
+      counter = counter + 1
+    end
+  end
+  counter
+end
+
+def current_player(board)
+  counter = turn_count board
+  if counter.even?
+    "X"
+  elsif counter.odd?
+    "O"
+  end
+end
