@@ -18,9 +18,13 @@ end
 def current_player(board)
   turns_played = turn_count(board)
 
-  if turns_played % 2 == 0
-    return "X"
-  else return "O"
-  end
+  # if turns_played % 2 == 0
+  #   return "X"
+  # else return "O"
+  # end
+
+  # return turns_played % 2 == 0 ? "X" : "O"
+
+  return turns_played.even? ? "X" : "O"
 
 end
