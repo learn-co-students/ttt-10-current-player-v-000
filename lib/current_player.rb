@@ -10,11 +10,29 @@ def turn_count(board)
   return counter
 end
 
+# BASIC method
+
+#def current_player(board)
+#  if turn_count(board) % 2 == 0
+#    return "X"
+#  else
+#
+#    return "O"
+#  end
+#end
+
+# IMPROVED method
+
+#def current_player(board)
+#  if turn_count(board).even?
+#    return "X"
+#  else
+#    return "O"
+#  end
+#end
+
+# TERNARY OPERATOR method
 
 def current_player(board)
-  if turn_count(board).odd?
-    current_player(board) == "O"
-  else
-    current_player(board) == "X"
-  end
+turn_count(board).even? ? "X" : "O"
 end
