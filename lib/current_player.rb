@@ -1,11 +1,14 @@
-def turn_count
-    number_of_turns = 0
-    @board.each do |space|
-    if space == "X" || space == "O"
-        number_of_turns += 1
+def turn_count (board)
+  counter = 0
+    board.each do |index|
+    if index == "X" || index == "O"
+      counter += 1
     end
   end
-
+  return counter
+end
 
 def current_player (board)
-  end
+  if % 
+  
+end
