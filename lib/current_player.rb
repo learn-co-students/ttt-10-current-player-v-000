@@ -1,11 +1,12 @@
 def turn_count(board)
-  count = 0
-  board.each do |space|
-    if space == "X" || space == "O"
-      count += 1
-    end
-  end
-    count
+  # count = 0
+  # board.each do |space|
+  #   if space == "X" || space == "O"
+  #     count += 1
+  #   end
+  # end
+  #   count
+  board.count {|space| space == "X" || space == "O"}
 end
 
 def current_player(board)
