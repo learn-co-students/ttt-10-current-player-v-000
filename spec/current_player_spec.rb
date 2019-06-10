@@ -28,6 +28,9 @@ describe "./lib/current_player.rb" do
       board = ["O", " ", " ", " ", "X", " ", " ", " ", " "]
 
       expect(current_player(board)).to eq("X")
+
+
+
     end
-  end  
+  end
 end
