@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/current_player"
+board = ["X", "O", " ", " ", " ", " ", " ", " ", " "]
+last_player = current_player(board)
+puts "#{last_player}"
