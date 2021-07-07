@@ -31,3 +31,6 @@ describe "./lib/current_player.rb" do
     end
   end  
 end
+
+# it 'returns the correct player, X for the third move' do
+#board = ["O", " ", " ",]
